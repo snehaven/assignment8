@@ -146,17 +146,25 @@ class Tree(object):
     # Returns the list of the node that you see from left side
     # The order of the output should be from top to down
     def left_side_view(self):
-        pass
+        level = 0
+        left_side = []
+        while len(self.get_level(level)) != 0:
+            left_side.append(self.get_level(level)[0].data)
+            level += 1
+        return left_side
 
 
     # returns the sum of the value of all leaves.
     # a leaf node does not have any children.
-    def sum_leaf_nodes(self):
-        pass
-
-
-
-
+    def sum_leaf_node(self):
+        level = 0
+        sum = 0
+        while len(self.get_level(level)) != 0:
+            for node in self.get_level(level):
+                if node.lChild is None and node.rChild is None:
+                    sum += node.data
+            level += 1
+        return sum
 
 
 def make_tree(data):
