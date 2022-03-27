@@ -1,23 +1,22 @@
 #  File: TestBinaryTree.py
 
-#  Description:
+#  Description: Creates and performs multiple methods for a binary tree.
 
-#  Student Name:
+# vStudent Name: Sneha Venkatesan
 
-#  Student UT EID:
+#  Student UT EID: sv23377
 
-#  Partner Name:
+#  Partner Name: Liyan Deng
 
-#  Partner UT EID:
+#  Partner UT EID: ld26995
 
 #  Course Name: CS 313E
 
-#  Unique Number:
+#  Unique Number: 51130
 
-#  Date Created:
+#  Date Created: 3-27-2022
 
-#  Date Last Modified:
-
+#  Date Last Modified: 3-27-2022
 
 import sys
 
@@ -138,7 +137,7 @@ class Tree(object):
                 tree_queue.enqueue(current.rChild)
                 tree_queue.enqueue(current.lChild)
 
-            for i in range(tree_queue.size()):
+            for i in range(total - 1):
                 list.append(tree_queue.dequeue())
 
         return list
