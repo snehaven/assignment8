@@ -136,7 +136,6 @@ class Tree(object):
                 current = tree_queue.dequeue()
                 tree_queue.enqueue(current.lChild)
                 tree_queue.enqueue(current.rChild)
-                print(tree_queue.__str__())
 
             for i in range(total):
                 list.append(tree_queue.dequeue().data)
