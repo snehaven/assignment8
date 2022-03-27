@@ -137,7 +137,7 @@ class Tree(object):
                 tree_queue.enqueue(current.rChild)
                 tree_queue.enqueue(current.lChild)
 
-            for i in range(total - 1):
+            for i in range(total):
                 list.append(tree_queue.dequeue())
 
         return list
