@@ -132,13 +132,14 @@ class Tree(object):
             tree_queue = Queue()
             total = 2 ** level
             tree_queue.enqueue(self.root)
-            while (tree_queue.size() <= total):
+            while (tree_queue.size() != total):
                 current = tree_queue.dequeue()
-                tree_queue.enqueue(current.rChild)
                 tree_queue.enqueue(current.lChild)
+                tree_queue.enqueue(current.rChild)
+                print(tree_queue.__str__())
 
             for i in range(total):
-                list.append(tree_queue.dequeue())
+                list.append(tree_queue.dequeue().data)
 
         return list
 
